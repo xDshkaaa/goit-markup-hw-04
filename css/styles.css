@@ -7,9 +7,9 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--main-color);
   background-color: #fff;
 }
@@ -75,8 +75,8 @@ a {
   font-size: 26px;
   line-height: 1.19;
   color: var(--blue-color);
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .top-nav {
   display: block;
@@ -136,8 +136,29 @@ a {
   color: var(--blue-color);
 }
 
+.top-auth::before {
+  display: inline-block;
+  content: "";
+  outline: 1px solid #000;
+  width: 20px;
+  height: 20px;
+}
+
 /*hero  */
 .hero {
+  background-size: cover;
+  max-width: 1600px;
+  min-height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/header/header.jpg");
+
+  background-position: center;
   background-color: #2f303a;
 }
 
@@ -181,9 +202,9 @@ a {
 }
 .knob:hover,
 .knob:focus {
+  color: #fff;
   background-color: var(--light-blue-color);
 }
-
 /* benefits */
 
 .benefits {
@@ -199,6 +220,32 @@ a {
 }
 .benefits-item:last-child {
   margin-right: 0px;
+}
+.benefits-item::before {
+  content: "";
+
+  display: block;
+
+  height: 120px;
+
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+.antenna::before {
+  background-image: url(../images/svg/antenna\ .svg);
+}
+.clock::before {
+  background-image: url(../images/svg/clock.svg);
+}
+.diagram::before {
+  background-image: url(../images/svg/diagram.svg);
+}
+.astronaut::before {
+  background-image: url(../images/svg/astronaut.svg);
 }
 .benefints-header {
   margin-bottom: 10px;
