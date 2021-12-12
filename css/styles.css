@@ -138,7 +138,8 @@ a {
   color: var(--blue-color);
 }
 
-.top-auth:hover .top-svg {
+.top-auth:hover,
+.top-auth:focus .top-svg {
   fill: var(--blue-color);
 }
 
@@ -338,14 +339,6 @@ a {
 .team-link {
   color: var(--header-color);
 }
-.team-member:hover,
-:focus {
-  color: var(--blue-color);
-}
-.team-role:hover,
-:focus {
-  color: var(--blue-color);
-}
 
 .team-panel {
   margin-top: 30px;
@@ -423,7 +416,9 @@ a {
 
 .customers-list {
   display: flex;
-  justify-content: space-between;
+}
+.customers-item:not(:last-child) {
+  margin-right: 30px;
 }
 .customers-link {
   border: 1px solid #afb1b8;
@@ -443,9 +438,13 @@ a {
   width: 170px;
   height: 92px;
 }
-.customers-icon:hover {
+.customers-link:hover .customers-icon {
   fill: var(--blue-color);
 }
+.customers-link:focus .customers-icon {
+  fill: var(--blue-color);
+}
+
 /* footer */
 .down {
   padding-top: 60px;
@@ -640,7 +639,9 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.master-item:hover {
+.master-link:hover,
+.master-link:focus {
+  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -679,10 +680,6 @@ img {
   letter-spacing: 0.06em;
   color: var(--header-color);
 }
-.master-title:hover,
-:focus {
-  color: var(--blue-color);
-}
 
 .master-resource {
   font-weight: normal;
@@ -692,8 +689,4 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--main-color);
-}
-.master-resource:hover,
-:focus {
-  color: var(--blue-color);
 }
